@@ -1,0 +1,33 @@
+:root {
+  // size
+  --s-font-size: 16px;
+  --s-gutter: 30px;
+  --s-spacer-sm: 5px;
+  --s-spacer-md: 10px;
+  --s-border-sm: 1px;
+  --s-border-md: 2px;
+  --s-border-radius: 6px;
+
+  // typography material-ui
+  --t-h1: 6rem;
+  --t-h2: 3.75rem;
+  --t-h3: 3rem;
+  --t-h4: 2.125rem;
+  --t-h5: 1.5rem;
+  --t-h6: 1.25rem;
+  --t-body2: 1.25rem;
+  --t-body1: 0.875rem;
+  --t-caption: 0.75rem;
+
+  // z-index bootstrap
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  --bxShadow-1: rgba(150, 150, 150, 0.1) 0px 0px 20px 0px;
+  --bxShadow-2: rgba(0, 0, 0, 0.07) 5px 31px 85px 23px;
+}

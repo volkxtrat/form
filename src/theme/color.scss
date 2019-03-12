@@ -1,0 +1,40 @@
+$primary: #212121;
+$secondary: #f44336;
+:root {
+  --c-bg-main: #f6f6f6;
+  --c-bg-paper: #ffffff;
+  --c-common-white: #ffffff;
+  --c-common-black: #000000;
+
+  // text
+  --c-textPrimary: rgba(0, 0, 0, 0.87);
+  --c-textSecondary: rgba(0, 0, 0, 0.54);
+  --c-textDisabled: rgba(0, 0, 0, 0.38);
+
+  --c-primary: #{$primary};
+  --c-primary-dark: #{darken($primary, 30%)};
+  --c-primary-light: #424242;
+  --c-primary-contrast: var(--c-common-white);
+
+  --c-secondary: #{$secondary};
+  --c-secondary-dark: #b71c1c;
+  --c-secondary-light: #ef5350;
+  --c-secondary-contrast: var(--c-common-white);
+
+  --c-success: #4caf50;
+  --c-error: #d50000;
+  --c-warning: #ffeb3b;
+
+  // actions
+  --c-active: rgba(0, 0, 0, 0.54);
+  --c-hover: rgba(0, 0, 0, 0.08);
+  --c-selected: rgba(0, 0, 0, 0.14);
+  --c-disabled: rgba(0, 0, 0, 0.26);
+  --c-disabledBackground: rgba(0, 0, 0, 0.12);
+}
+
+.black {
+  --c-bg-main: #212121;
+  --c-bg-paper: #424242;
+  --c-text: var(--c-common-white);
+}
