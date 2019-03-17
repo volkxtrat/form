@@ -3,27 +3,29 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const StyledPaper = styled.div`
-  padding: ${props => !props.disableGutters && "1rem"};
+  padding: ${props => !props.offGutters && "1rem"};
   background: var(--c-bg-paper);
-  box-shadow: ${props => !props.disableShadow && "var(--bxShadow-1)"};
-  border-radius: ${props =>
-    !props.disableBorderRadius && "var(--s-border-radius)"};
+  box-shadow: ${props => !props.offShadow && "var(--bxShadow-1)"};
+  width: ${p => p.fullWidth && "100%"};
+  border-radius: ${props => !props.offBorderRadius && "var(--s-border-radius)"};
 `;
 
 function Paper({
   components,
-  disableShadow,
-  disableGutters,
-  disableBorderRadius,
+  fullWidth,
+  offShadow,
+  offGutters,
+  offBorderRadius,
   children,
   ...props
 }) {
   return (
     <StyledPaper
       as={components}
-      disableGutters={disableGutters}
-      disableShadow={disableShadow}
-      disableBorderRadius={disableBorderRadius}
+      offGutters={offGutters}
+      offShadow={offShadow}
+      offBorderRadius={offBorderRadius}
+      fullWidth={fullWidth}
       {...props}
     >
       {children}
@@ -32,16 +34,18 @@ function Paper({
 }
 
 Paper.propTypes = {
-  disableShadow: PropTypes.bool,
-  disableGutters: PropTypes.bool,
-  disableBorderRadius: PropTypes.bool,
+  fullWidth: PropTypes.bool,
+  offShadow: PropTypes.bool,
+  offGutters: PropTypes.bool,
+  offBorderRadius: PropTypes.bool,
   components: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 };
 
 Paper.defaultProps = {
-  disableShadow: false,
-  disableGutters: false,
-  disableBorderRadius: false,
+  fullWidth: false,
+  offShadow: false,
+  offGutters: false,
+  offBorderRadius: false,
   components: "div"
 };
 

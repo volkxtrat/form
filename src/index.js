@@ -5,9 +5,11 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 
-import "./theme/theme.scss";
-import "./index.css";
+import defaultTheme from "./theme/theme";
+
+import "./theme/style/theme.scss";
 import App from "./App";
 import rootReducer from "./store/rootReducer";
 
@@ -16,7 +18,9 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 const app = (
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <ThemeProvider theme={defaultTheme}>
+        <App />
+      </ThemeProvider>
     </BrowserRouter>
   </Provider>
 );

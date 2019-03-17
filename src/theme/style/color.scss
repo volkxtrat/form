@@ -11,6 +11,13 @@ $secondary: #f44336;
   --c-textSecondary: rgba(0, 0, 0, 0.54);
   --c-textDisabled: rgba(0, 0, 0, 0.38);
 
+  --c-outline: rgba(0, 123, 255, 0.25);
+  --c-link: #0056b3;
+
+  --c-success: #4caf50;
+  --c-error: #d50000;
+  --c-warning: #ffeb3b;
+
   --c-primary: #{$primary};
   --c-primary-dark: #{darken($primary, 30%)};
   --c-primary-light: #424242;
@@ -21,16 +28,14 @@ $secondary: #f44336;
   --c-secondary-light: #ef5350;
   --c-secondary-contrast: var(--c-common-white);
 
-  --c-success: #4caf50;
-  --c-error: #d50000;
-  --c-warning: #ffeb3b;
-
   // actions
   --c-active: rgba(0, 0, 0, 0.54);
   --c-hover: rgba(0, 0, 0, 0.08);
   --c-selected: rgba(0, 0, 0, 0.14);
   --c-disabled: rgba(0, 0, 0, 0.26);
   --c-disabledBackground: rgba(0, 0, 0, 0.12);
+
+  --c-divider: rgba(0, 0, 0, 0.12);
 }
 
 .black {
