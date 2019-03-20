@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
 import todoReducer from "./reducers/todo";
+import userReducer from "./reducers/user";
 
 export default combineReducers({
-  todo: todoReducer
+  user: userReducer,
+  todo: todoReducer,
 });

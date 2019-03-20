@@ -12,8 +12,18 @@ import defaultTheme from "./theme/theme";
 import "./theme/style/theme.scss";
 import App from "./App";
 import rootReducer from "./store/rootReducer";
+import { compose } from "recompose";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const composeEnhancers =
+  typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+        // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+      })
+    : compose;
+
+const enhancer = composeEnhancers(applyMiddleware(thunk));
+
+const store = createStore(rootReducer, enhancer);
 
 const app = (
   <Provider store={store}>
